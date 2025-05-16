@@ -156,12 +156,12 @@ exports.register = async (header, body) => {
     // Send Mail
     const oauth2Client = new OAuth2(
         "173872994719-pvsnau5mbj47h0c6ea6ojrl7gjqq1908.apps.googleusercontent.com", // ClientID
-        "xxxx", // Client Secret
+        "client-secret", // Client Secret
         "https://developers.google.com/oauthplayground" // Redirect URL
     );
 
     oauth2Client.setCredentials({
-        refresh_token: "xxx"
+        refresh_token: "refresh-token"
     });
     const accessToken = oauth2Client.getAccessToken()
 

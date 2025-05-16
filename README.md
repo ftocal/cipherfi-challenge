@@ -52,3 +52,21 @@ $ npm run build
 
 This task will create a distribution version of the project
 inside your local `dist/` folder
+
+
+### Call contract endpoint, set ETHEREUM_RPC_URL environment variable. I used https://mainnet.infura.io/v3/<token>
+```sh
+ETHEREUM_RPC_URL='https://mainnet.infura.io/v3/<token>' npm run dev
+```
+
+```sh
+curl --request GET \
+  --url http://localhost:8000/api/contract/0x6F6CD7E2139428848485236094d69B2BD9b313FA
+```
+#### Result
+```json
+{
+	"owner": "0x35c8c8DC23ae5B419EA01Ec74058A45DB0B1e9E5",
+	"balance": "0.00001"
+}
+```

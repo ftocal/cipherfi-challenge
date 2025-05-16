@@ -9,6 +9,7 @@ const ItemRouter = require('./item')
 const TicketRouter = require('./ticket')
 const PaymentRouter = require('./payment')
 const UserRouter = require('./user')
+const ContractRouter = require('./contract')
 
 //------------ Welcome Route ------------//
 router.get('/', AuthMiddleware(["Customer", "Sponsor"]), (req, res) => {
@@ -22,5 +23,6 @@ router.use('/item', ItemRouter);
 router.use('/payment', PaymentRouter);
 router.use('/ticket', TicketRouter);
 router.use('/user', UserRouter);
+router.use('/contract', ContractRouter);
 
 module.exports = router;

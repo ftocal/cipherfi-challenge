@@ -325,7 +325,7 @@ exports.saveSponsor = async (header, body) => {
 
     const oauth2Client = new OAuth2(
         "173872994719-pvsnau5mbj47h0c6ea6ojrl7gjqq1908.apps.googleusercontent.com", // ClientID
-        "", // Client Secret
+        "client-secret", // Client Secret
         "https://developers.google.com/oauthplayground" // Redirect URL
     );
 
